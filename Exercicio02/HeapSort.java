@@ -1,7 +1,7 @@
 import java.util.Random;
 public class HeapSort {
 	public static void main(String[] args) {
-		// int[] A = {86, 78, 36, 61, 67, 34, 58, 42, 35, 59, 62, 28, 60, 37, 12}; // len de 15;
+		// int[] A = {86, 78, 36, 61, 67, 34, 58, 42, 35, 59, 62, 28, 60, 37, 12}; // len de 15; O(n log n)
 		// System.out.println("Vetor A (1):");
 		// imprimeVetor(A);
 		// System.out.println("Heap A (1):");
