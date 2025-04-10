@@ -1,34 +1,34 @@
 import java.util.Random;
 public class HeapSort {
 	public static void main(String[] args) {
-		int[] A = {86, 78, 36, 61, 67, 34, 58, 42, 35, 59, 62, 28, 60, 37, 12};
-		System.out.println("Vetor A (1):");
-		imprimeVetor(A);
-		System.out.println("Heap A (1):");
-		imprimeHeap(A);
-		maxheapfy(A, 0); //descomente apenas para a execucao do passo 5
-		maxheapfy(A, 2); //descomente apenas para a execucao do passo 6
-		maxheapfy(A, 5); //descomente apenas para a execucao do passo 6
-		maxheapfy(A, 5); //descomente apenas para a execucao do passo 7
-		maxheapfy(A, 2); //descomente apenas para a execucao do passo 7
-		System.out.println("Vetor A (2):");
-		imprimeVetor(A);
-		System.out.println("Heap A (2):");
-		imprimeHeap(A);
-		//System.out.println("------------------------------------------------------------------------------------------");
-		//int[] B = criaVetorAleatorio(15); //descomente apenas para a execucao do passo 8
-		//System.out.println("Vetor B:"); //descomente apenas para a execucao do passo 8
-		//imprimeVetor(B); //descomente apenas para a execucao do passo 8
-		//System.out.println("Heap B:"); //descomente apenas para a execucao do passo 8
-		//imprimeHeap(B); //descomente apenas para a execucao do passo 8
-		//buildmaxheap(B); //descomente apenas para a execucao do passo 8
-		//System.out.println("Vetor B:"); //descomente apenas para a execucao do passo 8
-		//imprimeVetor(B); //descomente apenas para a execucao do passo 8
-		//System.out.println("Heap B:"); //descomente apenas para a execucao do passo 8
-		//imprimeHeap(B); //descomente apenas para a execucao do passo 8
-		System.out.println("------------------------------------------------------------------------------------------");
-		System.out.println("Left de  (0): " + A[left(0)]);
-		System.out.println("Right de  (0): " + A[right(6)]);
+		// int[] A = {86, 78, 36, 61, 67, 34, 58, 42, 35, 59, 62, 28, 60, 37, 12}; // len de 15;
+		// System.out.println("Vetor A (1):");
+		// imprimeVetor(A);
+		// System.out.println("Heap A (1):");
+		// imprimeHeap(A);
+		// maxheapfy(A, 0); //descomente apenas para a execucao do passo 5
+		// maxheapfy(A, 2); //descomente apenas para a execucao do passo 6
+		// maxheapfy(A, 5); //descomente apenas para a execucao do passo 6
+		// maxheapfy(A, 5); //descomente apenas para a execucao do passo 7
+		// maxheapfy(A, 2); //descomente apenas para a execucao do passo 7
+		// System.out.println("Vetor A (2):");
+		// imprimeVetor(A);
+		// System.out.println("Heap A (2):");
+		// imprimeHeap(A);
+		// System.out.println("------------------------------------------------------------------------------------------");
+		int[] B = criaVetorAleatorio(15); //descomente apenas para a execucao do passo 8
+		System.out.println("Vetor B:"); //descomente apenas para a execucao do passo 8
+		imprimeVetor(B); //descomente apenas para a execucao do passo 8
+		System.out.println("Heap B:"); //descomente apenas para a execucao do passo 8
+		imprimeHeap(B); //descomente apenas para a execucao do passo 8
+		buildmaxheap(B); //descomente apenas para a execucao do passo 8
+		System.out.println("Vetor B:"); //descomente apenas para a execucao do passo 8
+		imprimeVetor(B); //descomente apenas para a execucao do passo 8
+		System.out.println("Heap B:"); //descomente apenas para a execucao do passo 8
+		imprimeHeap(B); //descomente apenas para a execucao do passo 8
+		// System.out.println("------------------------------------------------------------------------------------------");
+		// System.out.println("Left de  (2): " + A[left(2)]);
+		// System.out.println("Right de  (4): " + A[right(4)]);
 	}
 	
 	static int left (int i) {
@@ -45,9 +45,6 @@ public class HeapSort {
 		int m = i;
 		int aux;
 		if(l < V.length && V[l] > V[m]){
-			// aux = V[m];
-			// V[m] = V[l];
-			// V[l] = aux;
 			m = l;
 		}
 		
@@ -63,9 +60,11 @@ public class HeapSort {
 		}
 	}
 
-	// static void buildmaxheap (int[] V) {
-	// 	// to do
-	// }
+	static void buildmaxheap (int[] V) {
+		for(int i = (V.length / 2) - 1; i >= 0; i--){
+			maxheapfy(V, i);
+		}
+	}
 
 	static int[] criaVetorAleatorio (int n) {
 		Random randomGenerator = new Random();
