@@ -94,14 +94,14 @@ Constrói a estrutura de Max-Heap completa a partir de um vetor. Começa do meio
 Antes:
         0
       /   \
-     1     5
+     4     5
     / \   / \
-   3   4 2   6
+   3   1 2   6
 
 Depois:
         0
       /   \
-     1     5
+     1     2
     / \   / \
-   3   4 2   6
+   3   4 5   6
 ```
