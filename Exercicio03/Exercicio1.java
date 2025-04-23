@@ -32,30 +32,35 @@ public class Exercicio1 {
 	}
 	
 	static void organizaTurno (Crianca[] A) {
-		char pivot = A[A.length - 1].turno;
-
+		// char pivot = A[A.length - 1].turno;
 		int i = -1;
 		Crianca temp;
-		for(int j = 0; j < A.length-1; j++){
-			if(pivot == 'M'){
-				if(A[j].turno == pivot){
-					i++;
-					temp = A[i];
-					A[i] = A[j];
-					A[j] = temp;
-				}
-			}else{
-				if(A[j].turno != pivot){
-					i++;
-					temp = A[i];
-					A[i] = A[j];
-					A[j] = temp;
-				}
+		for(int j = 0; j < A.length; j++){
+			// if(pivot == 'M'){
+			// 	if(A[j].turno == pivot){
+			// 		i++;
+			// 		temp = A[i];
+			// 		A[i] = A[j];
+			// 		A[j] = temp;
+			// 	}
+			// }else{
+			// 	if(A[j].turno != pivot){
+			// 		i++;
+			// 		temp = A[i];
+			// 		A[i] = A[j];
+			// 		A[j] = temp;
+			// 	}
+			// }
+			if(A[j]. turno == 'M'){
+				i++;
+				temp = A[i];
+				A[i] = A[j];
+				A[j] = temp;
 			}
 		}
-		temp = A[i+1];
-		A[i+1] = A[A.length-1];
-		A[A.length-1] = temp;
+		// temp = A[i+1];
+		// A[i+1] = A[A.length-1];
+		// A[A.length-1] = temp;
 	}
 
 	// Dutch National Flag Problem
@@ -81,14 +86,14 @@ public class Exercicio1 {
 				A[j] = temp;
 			}
 		}
-		for (int j = i + 1; j < A.length; j++) {
-			if (A[j].idade >= 6) {
-				i++;
-				temp = A[i];
-				A[i] = A[j];
-				A[j] = temp;
-			}
-		}
+		// for (int j = i + 1; j < A.length; j++) {
+		// 	if (A[j].idade >= 6) {
+		// 		i++;
+		// 		temp = A[i];
+		// 		A[i] = A[j];
+		// 		A[j] = temp;
+		// 	}
+		// }
 
 	}
 	
