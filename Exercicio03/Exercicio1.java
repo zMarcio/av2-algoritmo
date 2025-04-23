@@ -32,25 +32,9 @@ public class Exercicio1 {
 	}
 	
 	static void organizaTurno (Crianca[] A) {
-		// char pivot = A[A.length - 1].turno;
 		int i = -1;
 		Crianca temp;
 		for(int j = 0; j < A.length; j++){
-			// if(pivot == 'M'){
-			// 	if(A[j].turno == pivot){
-			// 		i++;
-			// 		temp = A[i];
-			// 		A[i] = A[j];
-			// 		A[j] = temp;
-			// 	}
-			// }else{
-			// 	if(A[j].turno != pivot){
-			// 		i++;
-			// 		temp = A[i];
-			// 		A[i] = A[j];
-			// 		A[j] = temp;
-			// 	}
-			// }
 			if(A[j]. turno == 'M'){
 				i++;
 				temp = A[i];
@@ -58,14 +42,8 @@ public class Exercicio1 {
 				A[j] = temp;
 			}
 		}
-		// temp = A[i+1];
-		// A[i+1] = A[A.length-1];
-		// A[A.length-1] = temp;
 	}
 
-	// Dutch National Flag Problem
-	// https://pt.wikipedia.org/wiki/Problema_da_bandeira_dos_Pa%C3%ADses_Baixos
-	// Perguntar ao professor se como fazer esse metodo utilizando o partition
 	public static void organizaIdade(Crianca[] A) {
 		int i = -1;
 		Crianca temp;

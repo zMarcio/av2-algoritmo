@@ -8,10 +8,10 @@ O funcionamento da busca binária se baseia em dividir o vetor ao meio em busca 
 - Se for menor, a busca continua na parte esquerda.
 - Se for igual, a busca pode parar ou continuar na parte esquerda, dependendo do objetivo.
 
-## Explicação do método proposto
+## Atividade proposta
 
-O método implementado é semelhante à busca binária, mas em vez de buscar um valor específico, ele retorna a posição do maior elemento do vetor.
-
+Seja um vetor A de n elementos distintos tal que a sequência de valores A[0], A[1], …, A[n-1] é unimodal, ou seja, para algum índice p entre 0 e n-1 (exclusos), os elementos nas posições de 0 a p estão em ordem crescente, enquanto que os elementos nas posições de p a n-1 estão em ordem decrescente (Ex.: 1, 6, 7, 9, 8, 5, 4, 2, onde p = 3). Implementar uma função recursiva posMaior2 para determinar o índice do maior elemento do vetor em tempo O(lg n). Determinar e resolver a equação de recorrência para o seu algoritmo.
+## Resolução
 ### Implementação:
 ```java
 static int posMaior2(int[] vetor, int i, int f) {
