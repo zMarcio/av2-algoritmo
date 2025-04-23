@@ -26,18 +26,72 @@ public class Exercicio1 {
 			criancas[i] = new Crianca();
 		}
 		imprime(criancas);
-		//organizaTurno (criancas);
-		//organizaIdade (criancas);
-		// imprime(criancas);
+		// organizaTurno (criancas);
+		organizaIdade(criancas);
+		imprime(criancas);
 	}
 	
 	static void organizaTurno (Crianca[] A) {
-		//to do
+		char pivot = A[A.length - 1].turno;
+
+		int i = -1;
+		Crianca temp;
+		for(int j = 0; j < A.length-1; j++){
+			if(pivot == 'M'){
+				if(A[j].turno == pivot){
+					i++;
+					temp = A[i];
+					A[i] = A[j];
+					A[j] = temp;
+				}
+			}else{
+				if(A[j].turno != pivot){
+					i++;
+					temp = A[i];
+					A[i] = A[j];
+					A[j] = temp;
+				}
+			}
+		}
+		temp = A[i+1];
+		A[i+1] = A[A.length-1];
+		A[A.length-1] = temp;
 	}
 
-	static void organizaIdade (Crianca[] A) {
-		//to do
+	// Dutch National Flag Problem
+	// https://pt.wikipedia.org/wiki/Problema_da_bandeira_dos_Pa%C3%ADses_Baixos
+	// Perguntar ao professor se como fazer esse metodo utilizando o partition
+	public static void organizaIdade(Crianca[] A) {
+		int i = -1;
+		Crianca temp;
+		// crianças de 14 a 16 anos; crianças de 11 a 13 anos; e crianças de 6 a 10 anos. 
+		for (int j = 0; j < A.length; j++) {
+			if (A[j].idade >= 14) {
+				i++;
+				temp = A[i];
+				A[i] = A[j];
+				A[j] = temp;
+			}
+		}
+		for (int j = i + 1; j < A.length; j++) {
+			if (A[j].idade >= 11) {
+				i++;
+				temp = A[i];
+				A[i] = A[j];
+				A[j] = temp;
+			}
+		}
+		for (int j = i + 1; j < A.length; j++) {
+			if (A[j].idade >= 6) {
+				i++;
+				temp = A[i];
+				A[i] = A[j];
+				A[j] = temp;
+			}
+		}
+
 	}
+	
 
 	static void imprime (Crianca[] A) {
 		for (int i = 0; i < A.length; i++) {

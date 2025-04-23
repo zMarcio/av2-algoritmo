@@ -50,4 +50,7 @@ A execução prossegue até que `i` seja igual a `f`, indicando que o vetor foi 
 
 ## Análise assintótica
 T(n) = T(n/2) + O(1)
+a*t(n/b)
+n^log_b(a)
+a = 1
 T(n) = O(log n)
